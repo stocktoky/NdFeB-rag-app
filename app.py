@@ -259,7 +259,10 @@ with st.sidebar:
     if idx_path.exists():
         if 'index' not in st.session_state:
             st.session_state.index = SimpleIndex.load(idx_path)
-        st.success(f"✓ 통합 지식 베이스 로드 완료 ({st.session_state.index.count()} chunks)")
+        
+        # index 내부의 documents 리스트 개수를 직접 계산 (가장 에러 없는 안전한 방식)
+        total_chunks = len(st.session_state.index.documents)
+        st.success(f"✓ 통합 지식 베이스 로드 완료 ({total_chunks} chunks)")
     else:
         st.warning("⚠️ index.pkl 파일을 서버 스크립트와 같은 폴더에 배치해 주세요.")
 
