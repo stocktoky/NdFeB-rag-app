@@ -12,6 +12,18 @@ from collections import defaultdict
 import numpy as np
 import torch
 
+INDEX_FILE    = "index.pkl"
+EXAMPLES = [
+    "What is NdFeB permanent magnet?",
+    "What are the methods for making source materials for GBDP?",
+    "How are diffusion sources prepared for grain boundary diffusion?",
+    "What is PCAG alloy and how is it prepared?",
+    "What is a representative example of the GBDP method?",
+    "What compositions are used in GBDP to enhance coercivity?",
+    "What are the specific threshold values for enhancing coercivity?",
+    "How does CILFM affect Pr-rich shell formation?",
+    "What role does TaF5 play in the two-step GBDP?",
+]
 # =============================================================================
 # 기본 파라미터 및 가속 장치 설정
 # =============================================================================
