@@ -221,7 +221,7 @@ st.markdown("""
     .stButton>button:hover { background-color: #e8890f !important; }
     div[data-testid="stExpander"] { background-color: #272727 !important; border: 1px solid #484848 !important; }
     </style>
-""", unsafe_unsafe_rendering=True)
+""", unsafe_allow_html=True)  # <--- 반드시 unsafe_allow_html=True 로 수정해 주세요!
 
 st.title("⚗️ NdFeB Literature RAG Web v5.4")
 st.caption("Experimental Magnet Science Intelligence — Pure English Output Enforcement")
